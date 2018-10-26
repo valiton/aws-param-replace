@@ -1,4 +1,5 @@
-const AWS = require('aws-sdk');
+const AWS = require("aws-sdk");
+
 const ssm = new AWS.SSM();
 
 const ssmPattern = /\$\{ssm:.*?\}/g;
@@ -11,7 +12,7 @@ const responseToMap = data =>
   );
 
 const makeError = invalidParameters => {
-  const formattedParams = invalidParameters.join(', ');
+  const formattedParams = invalidParameters.join(", ");
   const errMsg = `The following Parameters could not be fetched from SSM. [${formattedParams}]`;
   return new Error(errMsg);
 };
