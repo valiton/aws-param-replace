@@ -1,8 +1,8 @@
 # AWS PARAM REPLACE
 
-This is a simple tool inject AWS SSM Parameters into text.
+This is a simple tool to inject AWS SSM Parameters into text.
 If text contains pattern like this `${ssm:/my/path/to/param}`,
-it will be replaced with the values of the parameter `/my/path/to/param`.
+it will be replaced with the value of the parameter `/my/path/to/param`.
 
 This can for example be used in a Deployment script when we want to fetch and
 inject variables from the Parameter Store into an ECS Task definition.
