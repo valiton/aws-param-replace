@@ -1,0 +1,17 @@
+{
+  "name": "aws-param-replace",
+  "version": "1.0.0",
+  "description": "Simple tool to fetch and replace parameters from AWS SSM into a string.",
+  "bin": "index.js",
+  "main": "replace-ssm-params.js",
+  "files": ["index.js", "replace-ssm-params.js"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["AWS SSM", "Parameter Store", "Secrets"],
+  "author": "Valiton GmbH",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.343.0"
+  }
+}
