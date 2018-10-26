@@ -14,7 +14,7 @@ afterwards so make sure the string is only used in secure places.
 
 You can use the tool on the command line or in a node script.
 **Note: Make sure to escape dollow signs properly if using doubly quoted shell strings
-or ES6 template strings ($ -> \$)**
+or ES6 template strings ($ -> \\$)**
 
 ### CLI
 
