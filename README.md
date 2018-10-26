@@ -29,7 +29,7 @@ MY_TEXT="
 Value=\${ssm:/my/path/to/param1}
 OtherValue=\${ssm:/my/path/to/param2}
 "
-npx aws-param-replace "$MY_TEXT"
+npx -p @valiton/aws-param-replace aws-param-replace "$MY_TEXT"
 
 # Outputs:
 #

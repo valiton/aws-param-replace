@@ -1,5 +1,5 @@
 {
-  "name": "aws-param-replace",
+  "name": "@valiton/aws-param-replace",
   "version": "1.0.0",
   "description": "Simple tool to fetch and replace parameters from AWS SSM into a string.",
   "bin": "src/index.js",
