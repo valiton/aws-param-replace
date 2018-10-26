@@ -12,7 +12,8 @@ afterwards so make sure the string is only used in secure places.
 
 ## Use
 
-You can use the tool on the command line or in a node script.
+You can use the tool on the command line or in a node script. For all the examples, make sure
+yo have AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY_ID and AWS_REGION(AWS_DEFAULT_REGION) configured in one of the ways described here for [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) or here for the node [AWS-SDK](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/configuring-the-jssdk.html).
 **Note: Make sure to escape dollow signs properly if using doubly quoted shell strings
 or ES6 template strings ($ -> \\$)**
 
