@@ -69,4 +69,4 @@ Node 8+
 ## Credits
 
 Inspired by the awesome [serverless framework](https://serverless.com/).
-Made my [Valiton](https://www.valiton.com/).
+Made by [Valiton](https://www.valiton.com/).
