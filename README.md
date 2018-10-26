@@ -1,7 +1,8 @@
-# AWS PARAM REPLACE
+# AWS PARAM INJECT
 
-This is a simple tool to replace this patter `${ssm:/my/path/to/param}` with the
-value of `/my/path/to/param` in the AWS Parameter store.
+This is a simple tool to inject AWS SSM Parameters into text.
+If text contains pattern like this `${ssm:/my/path/to/param}`,
+it will be injected with the value of the parameter `/my/path/to/param`.
 
 This can for example be used in a Deployment script when we want to fetch and
 inject variables from the Parameter Store into an ECS Task definition.
@@ -29,7 +30,7 @@ MY_TEXT="
 Value=\${ssm:/my/path/to/param1}
 OtherValue=\${ssm:/my/path/to/param2}
 "
-npx -p @valiton/aws-param-replace aws-param-replace "$MY_TEXT"
+npx -p @valiton/aws-param-inject aws-param-inject "$MY_TEXT"
 
 # Outputs:
 #
@@ -41,15 +42,15 @@ npx -p @valiton/aws-param-replace aws-param-replace "$MY_TEXT"
 
 Since `npm ci` will not be available install the package globally first
 ```sh
-npm i -g aws-param-replace
+npm i -g aws-param-inject
 # then run it
-aws-param-replace "..."
+aws-param-inject "..."
 ```
 
 ### Node API
 
 ```js
-const replaceSsmParams = require('aws-param-replace');
+const injectSsmParams = require('@valiton/aws-param-inject');
 
 // Make sure to escape the dollar sign in the template string
 const input = `
@@ -57,7 +58,8 @@ Value=\${ssm:/my/path/to/param1}
 OtherValue=\${ssm:/my/path/to/param2}
 `
 
-replaceSsmParams(input)
+injectSsmParams(input)
+  .then(inputWithInjectedParameters => ...)
 ```
 
 ## Requirements
@@ -66,4 +68,5 @@ Node 8+
 
 ## Credits
 
-Made by [Valiton](https://www.valiton.com/).
+Inspired by the awesome [serverless framework](https://serverless.com/).
+Made my [Valiton](https://www.valiton.com/).

@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-const replaceSsmParams = require('./replace-ssm-params');
+const injectSsmParams = require('./inject-ssm-params');
 
-const input = process.argv[2];
-
-if (!input) {
-  const usageMsg = `
-Usage: aws-param-replace <String>
+const usageMsg = `\
+Usage: aws-param-inject <String>
 
 <String> can contain any number of patterns like \${ssm:/path/to/param},
-which will be replaced into the input string.
+which will be injected into the input string.
 
 Example:
 
@@ -16,13 +13,15 @@ MY_TEXT="
 Value=\${ssm:/my/path/to/param1}
 OtherValue=\${ssm:/my/path/to/param2}
 "
-aws-param-replace "$MY_TEXT"
-`;
-  console.info(usageMsg);
-  process.exit(1);
-}
+aws-param-inject "$MY_TEXT"`;
 
-replaceSsmParams(input)
+const readInput = () => {
+  const input = process.argv[2];
+  return input ? Promise.resolve(input) : Promise.reject(new Error(usageMsg));
+};
+
+readInput()
+  .then(injectSsmParams)
   .then(console.log)
   .catch(err => {
     console.error(err.message);
