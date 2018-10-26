@@ -10,7 +10,7 @@ const responseToMap = data =>
     {}
   );
 
-const handleError = invalidParameters => {
+const makeError = invalidParameters => {
   const formattedParams = invalidParameters.join(', ');
   const errMsg = `\nThe following Parameters could not be fetched from SSM. [${formattedParams}\n]`;
   return new Error(errMsg);
@@ -24,7 +24,7 @@ const fetchParameters = names =>
       data =>
         data.InvalidParameters.length === 0
           ? Promise.resolve(responseToMap(data))
-          : Promise.reject(handleError(data.InvalidParameters))
+          : Promise.reject(makeError(data.InvalidParameters))
     );
 
 const replaceParameters = input => paramsMap =>
