@@ -66,4 +66,4 @@ Node 8+
 
 ## Credits
 
-Made my [Valiton](https://www.valiton.com/).
+Made by [Valiton](https://www.valiton.com/).
