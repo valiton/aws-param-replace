@@ -12,7 +12,7 @@ const responseToMap = data =>
 
 const makeError = invalidParameters => {
   const formattedParams = invalidParameters.join(', ');
-  const errMsg = `\nThe following Parameters could not be fetched from SSM. [${formattedParams}\n]`;
+  const errMsg = `The following Parameters could not be fetched from SSM. [${formattedParams}]`;
   return new Error(errMsg);
 };
 
