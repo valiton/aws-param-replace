@@ -2,9 +2,9 @@
   "name": "aws-param-replace",
   "version": "1.0.0",
   "description": "Simple tool to fetch and replace parameters from AWS SSM into a string.",
-  "bin": "index.js",
-  "main": "replace-ssm-params.js",
-  "files": ["index.js", "replace-ssm-params.js"],
+  "bin": "src/index.js",
+  "main": "src/replace-ssm-params.js",
+  "files": ["/src/"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
