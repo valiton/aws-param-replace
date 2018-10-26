@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const injectSsmParams = require('./inject-ssm-params');
+const injectSsmParams = require("./inject-ssm-params");
 
 const usageMsg = `\
 Usage: aws-param-inject <String>
