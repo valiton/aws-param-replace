@@ -50,7 +50,7 @@ aws-param-inject "..."
 ### Node API
 
 ```js
-const injectSsmParams = require('aws-param-inject');
+const injectSsmParams = require('@valiton/aws-param-inject');
 
 // Make sure to escape the dollar sign in the template string
 const input = `
@@ -59,6 +59,7 @@ OtherValue=\${ssm:/my/path/to/param2}
 `
 
 replaceSsmParams(input)
+  .then(inputWithInjectedParameters => ...)
 ```
 
 ## Requirements
