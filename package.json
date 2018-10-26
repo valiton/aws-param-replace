@@ -4,11 +4,17 @@
   "description": "Simple tool to fetch and replace parameters from AWS SSM into a string.",
   "bin": "src/index.js",
   "main": "src/replace-ssm-params.js",
-  "files": ["/src/"],
+  "files": [
+    "/src/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["AWS SSM", "Parameter Store", "Secrets"],
+  "keywords": [
+    "AWS SSM",
+    "Parameter Store",
+    "Secrets"
+  ],
   "author": "Valiton GmbH",
   "license": "MIT",
   "dependencies": {
