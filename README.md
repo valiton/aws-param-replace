@@ -20,8 +20,8 @@ or ES6 template strings ($ -> \\$)**
 ### CLI
 
 Assume your parameter on AWS SSM look like this:
-- /my/path/to/param1=Hello
-- /my/path/to/param2=World
+- `/my/path/to/param1=Hello`
+- `/my/path/to/param2=World`
 
 ```sh
 # Make sure to escape the dollar sign in the string in shell script
