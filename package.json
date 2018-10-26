@@ -1,9 +1,9 @@
 {
   "name": "@valiton/aws-param-inject",
   "version": "1.0.0",
-  "description": "Simple tool to fetch and replace parameters from AWS SSM into a string.",
+  "description": "Simple tool to fetch and inject parameters from AWS SSM into a string.",
   "bin": "src/index.js",
-  "main": "src/replace-ssm-params.js",
+  "main": "src/inject-ssm-params.js",
   "files": [
     "/src/"
   ],

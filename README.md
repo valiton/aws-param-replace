@@ -58,7 +58,7 @@ Value=\${ssm:/my/path/to/param1}
 OtherValue=\${ssm:/my/path/to/param2}
 `
 
-replaceSsmParams(input)
+injectSsmParams(input)
   .then(inputWithInjectedParameters => ...)
 ```
 
