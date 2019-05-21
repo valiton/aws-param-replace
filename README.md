@@ -40,7 +40,7 @@ npx -p @valiton/aws-param-inject aws-param-inject "$MY_TEXT"
 
 **For everyone with NPM version lower than 5.7**
 
-Since `npm ci` will not be available install the package globally first
+Since `npx` will not be available install the package globally first
 ```sh
 npm i -g @valiton/aws-param-inject
 # then run it
