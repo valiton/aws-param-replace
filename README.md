@@ -42,7 +42,7 @@ npx -p @valiton/aws-param-inject aws-param-inject "$MY_TEXT"
 
 Since `npm ci` will not be available install the package globally first
 ```sh
-npm i -g aws-param-inject
+npm i -g @valiton/aws-param-inject
 # then run it
 aws-param-inject "..."
 ```
