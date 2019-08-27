@@ -36,11 +36,10 @@ const fetchParameters = names =>
   ssm
     .getParameters({ Names: names, WithDecryption: true })
     .promise()
-    .then(
-      data =>
-        data.InvalidParameters.length === 0
-          ? Promise.resolve(responseToParams(data))
-          : Promise.reject(makeError(data.InvalidParameters))
+    .then(data =>
+      data.InvalidParameters.length === 0
+        ? Promise.resolve(responseToParams(data))
+        : Promise.reject(makeError(data.InvalidParameters))
     );
 
 const replaceParameters = input => paramsMap =>
